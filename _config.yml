@@ -25,9 +25,9 @@ description: TaeHyunKim's Personal Blog
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+#     - Github: "https://github.com/gpigp"
+#     - Learn markdown: "https://www.markdowntutorial.com/"
+  Author's Github: "https://github.com/gpigp"
 
 # --- Logo --- #
 
