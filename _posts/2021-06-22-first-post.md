@@ -1,3 +1,9 @@
-title: "Welcome to Jekyll!"
-date: 2017-10-20 08:26:28 -0400
-categories: jekyll update
+---
+layout: post
+title: First project
+subtitle: by taehyunKim
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [books, test]
+---
