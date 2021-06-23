@@ -19,7 +19,8 @@ public boolean imageprocess(Bitmap catBitmap, int tagNum) throws IOException {
     Bitmap albumImg;
 
     Matrix rotateMatrix = new Matrix();
-    //찍힌 사진이 정방향이 아니여서 90도로 회전시킴 //회전을 안시키니까 고양이 인식이 안됨
+    //찍힌 사진이 정방향이 아니여서 90도로 회전시킴
+    //회전을 안시키니까 고양이 인식이 안됨
     if( check_camera ){
         rotateMatrix.postRotate(90);
     }
@@ -29,8 +30,7 @@ public boolean imageprocess(Bitmap catBitmap, int tagNum) throws IOException {
     albumImg = Bitmap.createBitmap(catBitmap, 0, 0,
             catBitmap.getWidth(), catBitmap.getHeight(), rotateMatrix, false);
 
-
-    //기존 이미지에 고양이가 확인되면 color위에 사각형을 그림
+    //비트맵을 Mat타입으로 변환
     Mat color = new Mat();
     Utils.bitmapToMat(albumImg, color);
 
