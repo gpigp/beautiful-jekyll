@@ -10,3 +10,58 @@ tags: [Java, Android Studio, OpenCV]
 
 고양이 알리미
 =============
+
+
+```java
+public boolean imageprocess(Bitmap catBitmap, int tagNum) throws IOException {
+
+    boolean ret;
+    Bitmap albumImg;
+
+    Matrix rotateMatrix = new Matrix();
+    //찍힌 사진이 정방향이 아니여서 90도로 회전시킴 //회전을 안시키니까 고양이 인식이 안됨
+    if( check_camera ){
+        rotateMatrix.postRotate(90);
+    }
+    else{
+        rotateMatrix.postRotate(0);
+    }
+    albumImg = Bitmap.createBitmap(catBitmap, 0, 0,
+            catBitmap.getWidth(), catBitmap.getHeight(), rotateMatrix, false);
+
+
+    //기존 이미지에 고양이가 확인되면 color위에 사각형을 그림
+    Mat color = new Mat();
+    Utils.bitmapToMat(albumImg, color);
+
+    //기존 이미지를 흑백으로 바꾸어서 catfacedetect가 좀더 수월하게 함
+    Mat gray = new Mat();
+    Utils.bitmapToMat(albumImg, gray);
+    Imgproc.cvtColor(gray, gray, Imgproc.COLOR_RGBA2GRAY);
+
+    //고양이 detect with 흑백이미지
+    MatOfRect faceDetections = new MatOfRect();
+    faceDetector.detectMultiScale(gray,faceDetections);
+
+    if( faceDetections.empty() ){
+        ret = false;
+    }
+    else{
+        ret = true;
+        //고양이 얼굴에 사각형 생성 with color 이미지
+        for(Rect rect: faceDetections.toArray()) {
+            Imgproc.rectangle(color, new Point(rect.x, rect.y),
+                    new Point(rect.x + rect.width, rect.y + rect.height),
+                    new Scalar(255,0,0),
+                    20);
+        }
+
+        //imageView에 고양이 인식한 사진 올리기
+        Utils.matToBitmap(color, albumImg);
+        ImageView iv = imageSpace.findViewWithTag( "iv" + tagNum );
+        iv.setImageBitmap(albumImg);
+    }
+
+    return ret;
+}
+```
