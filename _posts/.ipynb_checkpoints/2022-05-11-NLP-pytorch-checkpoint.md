@@ -13,15 +13,14 @@ NLP
 ============================
 <br>
 <h6> one-hot Encoding with scikit learn </h6>
-~~~
+~~~ python
 from sklearn.feature_extraction.text import CountVectorizer
 
-corpus = ["Natural Language Processing"]
+corpus              = ["Natural Language Processing"]
 one_hot_vectorizing = CounterVectorizer(binary=True)
-ohe = one_hot_vectorizing.fit_transform(corpus).toarray()
-voca = one_hot_vectorizing.get_feature_names()
+ohe                 = one_hot_vectorizing.fit_transform(corpus).toarray()
+voca                = one_hot_vectorizing.get_feature_names()
 ~~~
-{: .language-python}
 <br>
 
 <h6> TF : Term Frequency </h6>
@@ -33,9 +32,9 @@ one-hot representation들의 합
 ~~~ python
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-corpus = ["Natural Language Processing"]
+corpus    = ["Natural Language Processing"]
 tfidf_vec = TfidfVectorizer()
-tfidf = tfidf_vec.fit_transform(corpus).toarray()
+tfidf     = tfidf_vec.fit_transform(corpus).toarray()
 ~~~
 <br>
 
