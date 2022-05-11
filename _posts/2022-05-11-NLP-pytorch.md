@@ -11,8 +11,8 @@ published: true
 
 NLP
 ============================
-
-<h6> one-hot vector with scikit learn </h6>
+<br>
+<h6> one-hot Encoding with scikit learn </h6>
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -24,4 +24,12 @@ voca = one_hot_vectorizing.get_feature_names()
 <br>
 
 <h6> TF : Term Frequency </h6>
-문장에서의 one-hot representation들의 합
+one-hot representation들의 합
+<br>
+
+<h6> IDF : Inverse Document Frequency </h6>
+흔한 토큰의 점수는 낮추고, 드문 토큰의 점수를 높임
+<br>
+
+
+
