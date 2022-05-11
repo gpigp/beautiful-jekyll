@@ -13,7 +13,7 @@ NLP
 ============================
 <br>
 <h6> one-hot Encoding with scikit learn </h6>
-~~~python
+~~~
 from sklearn.feature_extraction.text import CountVectorizer
 
 corpus = ["Natural Language Processing"]
@@ -21,6 +21,7 @@ one_hot_vectorizing = CounterVectorizer(binary=True)
 ohe = one_hot_vectorizing.fit_transform(corpus).toarray()
 voca = one_hot_vectorizing.get_feature_names()
 ~~~
+{: .language-python}
 <br>
 
 <h6> TF : Term Frequency </h6>
@@ -29,7 +30,7 @@ one-hot representation들의 합
 
 <h6> IDF : Inverse Document Frequency </h6>
 흔한 토큰의 점수는 낮추고, 드문 토큰의 점수를 높임
-~~~python
+~~~ python
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 corpus = ["Natural Language Processing"]
