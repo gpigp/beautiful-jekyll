@@ -13,14 +13,14 @@ NLP
 ============================
 <br>
 <h6> one-hot Encoding with scikit learn </h6>
-~~~ python
+``` python
 from sklearn.feature_extraction.text import CountVectorizer
 
 corpus              = ["Natural Language Processing"]
 one_hot_vectorizing = CounterVectorizer(binary=True)
 ohe                 = one_hot_vectorizing.fit_transform(corpus).toarray()
 voca                = one_hot_vectorizing.get_feature_names()
-~~~
+```
 <br>
 
 <h6> TF : Term Frequency </h6>
