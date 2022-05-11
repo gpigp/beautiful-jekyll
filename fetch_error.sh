@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git pull origin main --allow-unrelated-histories
+git pull origin master --allow-unrelated-histories
 
 # 최근 마지막 커밋 내역 한개 삭제
 #git reset HEAD^
