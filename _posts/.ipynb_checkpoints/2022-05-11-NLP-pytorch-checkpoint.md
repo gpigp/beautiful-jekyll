@@ -42,6 +42,16 @@ tfidf     = tfidf_vec.fit_transform(corpus).toarray()
 fill_(), normal_() 등과 같은 in-place 메소드는 새로운 객체를 생성하는게 아닌 현재값을 변경해준다.
 <br><br>
 
+<h6> tensor type 변환 </h6>
+~~~ python
+x  = torch.rand(2,3,4) # [2,3,4] -> [3,4]가 2개
+x1 = x.view(2,-1)      # [2,12]
+x2 = x.transpose(0,2)  # [4,3,2] -> [2,3]가 4개
+x3 = x.permute(2,1,0)  # [4,3,2]
+~~~
+<br>
+
+
 
 
 
