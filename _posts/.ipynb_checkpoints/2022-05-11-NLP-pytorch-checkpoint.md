@@ -13,7 +13,7 @@ NLP
 ============================
 <br>
 <h6> one-hot Encoding with scikit learn </h6>
-```python
+```Python3
 from sklearn.feature_extraction.text import CountVectorizer
 
 corpus = ["Natural Language Processing"]
@@ -29,14 +29,14 @@ one-hot representation들의 합
 
 <h6> IDF : Inverse Document Frequency </h6>
 흔한 토큰의 점수는 낮추고, 드문 토큰의 점수를 높임
-```python
+```Python3
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 corpus = ["Natural Language Processing"]
 tfidf_vec = TfidfVectorizer()
 tfidf = tfidf_vec.fit_transform(corpus).toarray()
 ```
-<br><br>
+<br>
 
 <h6> (_) 밑줄의 의미 </h6>
 fill_(), normal_() 등과 같은 in-place 메소드는 새로운 객체를 생성하는게 아닌 현재값을 변경해준다.
