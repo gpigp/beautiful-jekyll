@@ -2,8 +2,8 @@
 layout: post
 title: NLP 공부
 subtitle: Natural Language Processing
-cover-img: /assets/post2-img/indel_blue.jpg
-thumbnail-img: https://gpigp.github.io/taehyun/assets/post2-img/marmoset.jpg
+cover-img: /assets/NLP-img/cover.png
+<!-- thumbnail-img: https://gpigp.github.io/taehyun/assets/post2-img/marmoset.jpg -->
 tags: [NLP, Pytorch]
 
 published: true
