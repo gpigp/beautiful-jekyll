@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-/* @import url("pygment_highlights.css"); */
+@import url("pygment_highlights.css");
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto+Slab:wght@300&family=Work+Sans:wght@300&display=swap');
@@ -23,6 +23,9 @@ body {
   background-image: url({{ site.page-img | relative_url }});
   background-attachment: fixed;
   {% endif %}
+}
+body > header > div > div > div > div > div > h1 {
+  font-family: 'Indie Flower'
 }
 p {
   line-height: 1.5;
