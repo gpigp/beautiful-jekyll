@@ -3,7 +3,7 @@ layout: post
 title: Project002
 subtitle: SNP and INDEL calling
 cover-img: /assets/post2-img/indel_blue.jpg
-thumbnail-img: https://gpigp.github.io/taehyun/assets/post2-img/marmoset.jpg
+thumbnail-img: https://gpigp.github.io/taehyun/assets/post2-img/marmoset.png
 tags: [SNP, INDEL, Marmoset, Stanford, GATK4, BWA, Project]
 
 published: true
