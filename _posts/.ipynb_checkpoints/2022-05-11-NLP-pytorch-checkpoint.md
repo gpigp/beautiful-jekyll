@@ -29,6 +29,13 @@ one-hot representation들의 합
 
 <h6> IDF : Inverse Document Frequency </h6>
 흔한 토큰의 점수는 낮추고, 드문 토큰의 점수를 높임
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+corpus = ["Natural Language Processing"]
+tfidf_vec = TfidfVectorizer()
+tfidf = tfidf_vec.fit_transform(corpus).toarray()
+```
 <br>
 
 
