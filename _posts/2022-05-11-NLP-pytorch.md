@@ -50,6 +50,8 @@ x2 = x.transpose(0,2)  # [4,3,2] -> [2,3]가 4개
 x3 = x.permute(2,1,0)  # [4,3,2]
 ~~~
 <br>
+<span style="color: #2D3748; background-color: #fff5b1">2022.05.12.wrote</span>
+<br>
 
 
 
